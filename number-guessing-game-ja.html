@@ -43,7 +43,7 @@
 
     <script>
       let randomNumber = Math.floor(Math.random() * 100) + 1;
-      const guesses = document.querySelector('.guesses');
+      const guesses = document.querySelector('.guesses'); //class guesses
       const lastResult = document.querySelector('.lastResult');
       const lowOrHi = document.querySelector('.lowOrHi');
       const guessSubmit = document.querySelector('.guessSubmit');
@@ -83,6 +83,7 @@
         guessField.focus();
       }
 
+      //イベントが起きたらcheckGuessを呼び出す
       guessSubmit.addEventListener('click', checkGuess);
 
       function setGameOver() {
@@ -94,6 +95,7 @@
         resetButton.addEventListener('click', resetGame);
       }
 
+      //ゲームを再開するとき
       function resetGame() {
         guessCount = 1;
         const resetParas = document.querySelectorAll('.resultParas p');
